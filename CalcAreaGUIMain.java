@@ -6,12 +6,11 @@ import javax.swing.JTextField;
 import java.awt.Container;
 import java.awt.GridLayout;
 
-public class CalcAreaGUIMain{
-	public static void main(String[] args)
-	{
-	JFrame f = new JFrame();
+class CalcAreaGUIMain extends JFrame{
+	public CalcAreaGUIMain(){
+	setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	JPanel panel = new JPanel(new GridLayout(3,2));
-	f.getContentPane().add(panel);
+	this.getContentPane().add(panel);
 	JLabel Label1 = new JLabel("Radius");
 	JLabel Label2 = new JLabel("Area");
 	JTextField Field1 = new JTextField(10);
@@ -24,7 +23,13 @@ public class CalcAreaGUIMain{
 	panel.add(Field2);
 	panel.add(Button1);
 	panel.add(Button2);
-	f.pack();
-	f.setVisible(true);
+	this.pack();
+	this.setVisible(true); 
+	}
+
+	public static void main(String[] args)
+	{
+	CalcAreaGUIMain a = new CalcAreaGUIMain();
+	a.show();
 	}
 }
