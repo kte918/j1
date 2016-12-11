@@ -1,18 +1,14 @@
-package com.sd.ch8;
-import com.sd.ch8;
+import java.util.Scanner;
 
-public class Circle extends Point{
-	private double radius = 0;
-
-	Circle(int a, int b, double r){
-	x = a;
-	y = b;
-	radius = r;
+public class Circle {
+	Circle(){
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Pleas input your radius");
+		double r = sc.nextInt();
+		double pi = (double)Math.PI;
+		System.out.println("Result is " + r*r*pi);
+		}
+	public static void main(String[] args){
+	Circle c = new Circle();
 	}
-	
-	public double getArea()
-	{
-	double area = (radius*radius*3.141592);	
-	return area;
-	}  
 }
